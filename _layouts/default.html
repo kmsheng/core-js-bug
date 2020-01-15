@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>core-js-bug</title>
+    {% if jekyll.environment == "development" %}
+      <script src="http://localhost:8080/beyond.js"></script>
+    {% else %}
+      <script src="{{ '/dist/beyond.js' | relative_url }}"></script>
+    {% endif %}
+  </head>
+  <body>
+    {% if jekyll.environment == "development" %}
+      <script src="http://localhost:8080/web.js"></script>
+    {% else %}
+      <script src="{{ '/dist/web.js' | relative_url }}"></script>
+    {% endif %}
+  </body>
+</html>

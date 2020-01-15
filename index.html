@@ -1,0 +1,39 @@
+---
+layout: default
+title: Home
+---
+<div class="page-home card card-shadow-md">
+  <h1>Beyond</h1>
+  <p>這裡放全站共用元件</p>
+
+  <div class="doc">
+    <h2>安裝</h2>
+    <div class="code">
+{% highlight shell %}
+yarn add @superlanding/beyond --exact
+{% endhighlight %}
+    </div>
+
+    <h2>使用</h2>
+    <h3>在 sass 檔案引入樣式</h3>
+    <div class="code">
+{% highlight scss %}
+// 定義 css 圖片路徑與 font icons 路徑
+$beyond-icon-font-path: '~@superlanding/beyond/src/font/';
+$beyond-css-img-path: '~@superlanding/beyond/src/sass/img/';
+
+@import '~@superlanding/beyond/src/sass/index.scss';
+{% endhighlight %}
+    </div>
+
+    <h3>JS 元件存取</h3>
+    <div class="code">
+{% highlight js %}
+import { Datepicker, Dropdown, Modal, Tabbox, Toast, Tooltip } from '@superlanding/beyond'
+
+// 或是在瀏覽器環境存取 window.beyond
+const { Datepicker, Dropdown, Modal, Tabbox, Toast, Tooltip } = window.beyond
+{% endhighlight %}
+    </div>
+  </div>
+</div>
